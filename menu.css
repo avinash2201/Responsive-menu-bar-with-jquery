@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Girassol&display=swap');
+body{
+  margin:0;
+  padding: 0;
+font-family: 'Girassol', cursive;
+}
+.navbar{
+  width:100%;
+  height:65px;
+  background-color: #2f4454;
+  color:#da7b93;
+  transition: .3s ease;
+}
+.navbar ul{
+  float: right;
+  margin-right: 50px;
+
+}
+.navbar ul li{
+  list-style-type: none;
+  margin-left: 50px;
+  width:90px;
+  height:32px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+text-align: center;
+}
+.navbar ul li::before{
+  position: absolute;
+  content: '';
+  width:100%;
+  height: 4px;
+  bottom: 0;
+  background-color: white;
+  left: -100%;
+  transition: .3s ease;
+}
+.navbar ul li:hover::before{
+  left: 0;
+}
+.navbar ul a{
+  font-size: 21px;
+  letter-spacing: 2px;
+  color: #da7b93;
+  text-decoration: none;
+}
+.brand{
+  float: left;
+  font-size: 24px;
+  margin: 16px 0px 0px 25px;
+  letter-spacing: 3px;
+}
+.bars{
+  display: none;
+}
+.fas{
+  font-size: 30px;
+  float: right;
+  margin: 15px;
+ display: none;
+}
+.social-media{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: none;
+}
+.social-media h3{
+  letter-spacing: 3px;
+}
+.social-media .fab{
+  font-size: 25px;
+  margin-right: 20px;
+  color:#da7b93;
+}
+@media only screen and (max-width:600px){
+  .bars{
+    display: block;
+  }
+  .fas{
+    .display: block;
+
+  }
+  .close{
+    display: none;
+  }
+  .navbar{
+    position: absolute;
+    height:60px;
+  }
+  .navbar ul{
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    transform: translate(-30%,-30%);
+display: none;
+  }
+  .navbar ul li{
+    width:150px;
+    height: 50px;
+    margin-top: 20px;
+    display: none;
+  }
+  .navbar ul a{
+    font-size: 30px;
+    display: none;
+  }
+}
